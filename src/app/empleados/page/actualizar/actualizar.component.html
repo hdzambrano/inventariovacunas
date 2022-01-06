@@ -1,0 +1,107 @@
+<div class="formReg">
+    <h2>Registrar Empleado</h2>
+    <form [formGroup]="empleadoForm" (ngSubmit)="guardar()">
+      <!---->
+      <div class="form-group">
+        <label>DUI:</label>
+        <input type="number" formControlName="duiem" class="form-control" placeholder="Nro de DUI">
+      </div>
+      <!---->
+      <div class="form-group">
+        <label>Nombres:</label>
+        <input type="text" formControlName="nomem" class="form-control">
+      </div>
+      <!---->
+      <div class="form-group">
+        <label>Apellidos:</label>
+        <input type="text" formControlName="apeem" class="form-control">
+      </div>
+      <!---->
+      <div class="form-group">
+        <label>Correo Electronico:</label>
+        <input type="text" formControlName="corem" class="form-control">
+      </div>
+      <!---->
+      <!---->
+      <div class="form-group">
+        <label>Fecha Nacimiento:</label>
+        <input type="date" formControlName="fenem" class="form-control" placeholder="YYYY-MM-DD">
+      </div>
+      <!---->
+      <div class="form-group">
+        <label>Direccion:</label>
+        <input type="text" formControlName="direm" class="form-control">
+      </div>
+      <!---->
+      <div class="form-group">
+        <label>Telefono Movil:</label>
+        <input type="text" formControlName="tfmem" class="form-control">
+      </div>
+      <!---->
+      <div class="form-group">
+        <label>Vacuado:</label>
+        <input type="text" formControlName="stvem" class="form-control">
+      </div>
+      <!---->
+      <div class="form-group">
+        <label>Tipo de Vacuna:</label>
+        <input type="text" formControlName="tpvem" class="form-control">
+      </div>
+      <!---->      
+      <div class="form-group">
+        <label>Fecha de Vacuna:</label>
+        <input type="date" formControlName="fevem" class="form-control">
+      </div>
+      <!---->
+      <div class="form-group">
+        <label>Nro de Dosis:</label>
+        <input type="number" formControlName="ndvem" class="form-control">
+      </div>
+      <!---->
+      <button type="submit" class="btn btn-primary" [disabled]="empleadoForm.invalid">Guardar</button>
+      <!---->
+    </form>
+  </div>
+  
+  <div class="formReg">
+    <h2>Empledados Registrados</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>DUI</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Correo</th>     
+          <th>Fecha Nacimiento</th>
+          <th>Direccion</th>
+          <th>Telefono</th>
+          <th>Empleado Vacunado</th>
+          <th>Tipo Vacuna</th>
+          <th>Fecha Vacuna</th>
+          <th>Nro de Dosis Vacuna</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let item of empleados">
+          <th>{{item.duiem}}</th>
+          <td>{{item.nomem}}</td>
+          <td>{{item.apeem}}</td>
+          <td>{{item.corem}}</td>
+          <td>{{item.fenem}}</td>
+          <td>{{item.direm}}</td>
+          <td>{{item.tfmem}}</td>
+          <td>{{item.stvem}}</td>
+          <td>{{item.tpvem}}</td>
+          <td>{{item.fevem}}</td>
+          <td>{{item.ndvem}}</td>        
+          <td>
+            <button type="button" class="btn btn-success"(click)="editar(item)">Editar</button>
+          </td>
+         </tr>
+      </tbody>
+  
+  
+    </table>
+  </div>

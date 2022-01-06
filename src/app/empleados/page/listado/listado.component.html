@@ -1,0 +1,24 @@
+<div class="formReg">
+    <h2>Empledados Registrados</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>DUI</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Correo</th>     
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let item of empleados">
+          <th>{{item.duiem}}</th>
+          <td>{{item.nomem}}</td>
+          <td>{{item.apeem}}</td>
+          <td>{{item.corem}}</td>       
+         </tr>
+      </tbody>
+  
+  
+    </table>
+  </div>
