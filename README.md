@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Base de Datos Postgres: 
+Tabla "empleado" para el registro de empleados.
+
+IDE Spring Tool Suite 4: Creación del proyecto BACK END "inventario-vacunas"  y su contenido de clases: model, repository, service, rest.
+
+Entornos node js, nmp y con esta Angular CLI para FROND EN
+
+IDE "Visual Studio Code" para el desarrolló del proyecto "inventariovacunas" se programo la estructura de Pages (html,css), Componets, Module, routing, necesarios para el aplicativo.
+
